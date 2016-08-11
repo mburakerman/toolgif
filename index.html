@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Toolgif | A very simple Jquery gif tooltip plugin</title>
+<link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAIAEBAAAAAAIABoBAAAJgAAACAgAAAAACAAqBAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAAEAEAAAAAAAAAAAAAAAAAAAAAAAA////Af///wH///8B////Af///wH///8B////ASIiIiMiIiIp////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wEiIiLLIiIi2SIiIgX///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wEiIiKBIiIi/yIiIv8iIiKX////Af///wH///8B////Af///wH///8B////Af///wEiIiIJIiIiESIiIhciIiJfIiIi/yIiIv8iIiL/IiIi/yIiInEiIiIXIiIiESIiIgn///8B////ASIiIgkiIiKpIiIi9SIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL7IiIiryIiIg8iIiKjIiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiK1IiIi9SIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi+SIiIvkiIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIvkiIiL5IiIi/yIiIv8iIiL/c3Nz/7+/v//Dw8P/j4+P/+np6f+qqqr/ZGRk/yIiIv8iIiL/IiIi/yIiIv8iIiL5IiIi+SIiIv8iIiL/IiIi/9fX1/88PDz/rKys/7q6uv/p6en/qqqq/7Gxsf9/f3//IiIi/yIiIv8iIiL/IiIi+SIiIvkiIiL/IiIi/yIiIv++vr7/VVVV/05OTv9fX1//6enp/6qqqv9kZGT/IiIi/yIiIv8iIiL/IiIi/yIiIvkiIiL5IiIi/yIiIv8iIiL/Ly8v/4mJif+JiYn/Nzc3/4WFhf9mZmb/kJCQ/5CQkP8iIiL/IiIi/yIiIv8iIiL5IiIi+yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi+yIiIsMiIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIs8iIiIjIiIi4SIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIuciIiIv////ASIiIgkiIiJPIiIiWyIiIlsiIiJbIiIiWyIiIlsiIiJbIiIiWyIiIlsiIiJbIiIiWyIiIk8iIiIP////AQAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8oAAAAIAAAAEAAAAABACAAAAAAAIAQAAAAAAAAAAAAAAAAAAAAAAAA////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wEiIiKHIiIin////wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BIiIiOyIiIv8iIiL/IiIiaf///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wEiIiLzIiIi/yIiIv8iIiL/IiIiE////wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BIiIinyIiIv8iIiL/IiIi/yIiIv8iIiLX////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////ASIiImkiIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiKH////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wEiIiIhIiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiI7////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////ASIiIiEiIiIhIiIiISIiIiEiIiI7IiIiaSIiIvMiIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiKHIiIiOyIiIiEiIiIhIiIiISIiIiH///8B////Af///wH///8B////Af///wH///8BIiIiEyIiIp8iIiLXIiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIvMiIiKfIiIiIf///wH///8B////ASIiIiEiIiLzIiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIiO////wEiIiITIiIi8yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIiISIiIociIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiK3IiIi1yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIvMiIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi8yIiIvMiIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiLzIiIi8yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIvMiIiLzIiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv9WVlb/4uLi//7+/v/+/v7//v7+/6ampv8iIiL//v7+/9TU1P9WVlb//v7+/6ampv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi8yIiIvMiIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/VlZW//7+/v/i4uL/PT09/z09Pf/U1NT//v7+/3Z2dv/+/v7/1NTU/1ZWVv/+/v7/pqam/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiLzIiIi8yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv+mpqb//v7+/1ZWVv8iIiL/IiIi/5WVlf/+/v7/dnZ2//7+/v/U1NT/VlZW//7+/v+mpqb/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIvMiIiLzIiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/7y8vP/+/v7/IiIi/1ZWVv/+/v7//v7+//7+/v92dnb//v7+/9TU1P9WVlb//v7+//7+/v/+/v7//v7+/7y8vP8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi8yIiIvMiIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/pqam//7+/v89PT3/IiIi/yIiIv8iIiL/IiIi/yIiIv/+/v7/1NTU/1ZWVv/+/v7/pqam/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiLzIiIi8yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv9WVlb//v7+/9TU1P8iIiL/IiIi/9TU1P/+/v7/PT09//7+/v/U1NT/VlZW//7+/v+mpqb/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIvMiIiLzIiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv9WVlb/4uLi//7+/v/+/v7/4uLi/3Z2dv8iIiL//v7+/9TU1P9WVlb//v7+//7+/v/+/v7//v7+//7+/v8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi8yIiIvMiIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiLzIiIi8yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIvMiIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiItciIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiLXIiIiOyIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiImn///8BIiIihyIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiK3////Af///wH///8BIiIihyIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIin////wH///8B////Af///wH///8BIiIiISIiIociIiK3IiIityIiIrciIiK3IiIityIiIrciIiK3IiIityIiIrciIiK3IiIityIiIrciIiK3IiIityIiIrciIiK3IiIityIiIrciIiK3IiIityIiIrciIiK3IiIihyIiIjv///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<meta property="og:title" content="Toolgif" />
+<meta property="og:description" content="A very simple Jquery gif tooltip plugin" />
+<meta property="og:type" content="website" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@mburakerman" />
+<meta name="twitter:creator" content="@mburakerman" />
+<meta name="twitter:title" content="Toolgif">
+<meta name="twitter:description" content="A very simple Jquery gif tooltip plugin" />
+<!-- Twitter -->
+
+<!-- Facebook -->
+<meta property="og:title" content="Toolgif" />
+<meta property="og:description" content="A very simple Jquery gif tooltip plugin" />
+<!-- Facebook -->  
+
+</head>
+<body>
+<div class="page-wrapper">
+
+<div class="wrap-github-corner"> 
+<a href="https://your-url" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#222; color:#fff; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+</div>
+
+<nav>
+<h1><a href="https://mburakerman.github.io/toolgif/">Toolgif</a></h1>
+<h3>A very simple Jquery gif tooltip plugin</h3>
+<p>Lightweight , easy to use.</p>
+<a href="#0" class="download" download>Download</a>
+<a class="twitter-share-button" 
+href="https://twitter.com/share?url=https://mburakerman.github.io/toolgif/&text=A very simple Jquery gif tooltip plugin" target="_blank" rel="external">
+<i class="ion-social-twitter"></i>
+Tweet
+</a>
+</nav>
+
+<section>
+<h1>Getting Started</h1>	
+
+<h3>Load Jquery and include Tooltip file</h3>
+<div class="jquery-toolgif">
+<pre>
+<code>
+<p>&lt;script type="text/javascript" src="jquery.js"&gt;&lt;/script></p>
+<p>&lt;script type="text/javascript" src="toolgif.js"&gt;&lt;/script></p>
+</code>
+</pre>	
+</div>
+
+<h3>Set up your Html</h3>
+<p>If you  don't set "data-tag" in your html , Tooltip takes your text as tag and find gifs on <a href="https://giphy.com/" target="_blank" rel="external"><span class="toolgif" data-url="https://media.giphy.com/media/3o6gbbuLW76jkt8vIc/giphy.gif">Giphy</span></a>.</p>
+<div class="set-up-html">
+<pre>
+<code>
+<p>&lt;p&gt;I am a &lt;span class="toolgif"&gt;test&lt;/span&gt;.&lt;/p&gt;</p>
+</code>
+</pre>	
+</div>
+
+<h3>Activate Toolgif</h3>
+<div class="activate-toolgif">
+<pre>
+<code>
+<p>$(function() { 
+
+$(".toolgif").toolgif(); 
+
+});</p>
+</code>
+</pre>	
+</div>
+
+<h1>Examples</h1>
+<h3><i class="ion-arrow-right-b"> </i>Hover over cat more than one time.You see gifs are changing.</h3>
+<p>Lorem ipsum dolor sit <span class="toolgif">cat</span>.</p>
+<div class="example-1">
+<pre>
+<code>
+<p>&lt;p>Lorem ipsum dolor sit &lt;span class="toolgif"&gt;cat&lt;/span>.&lt;/p&gt;</p>
+</code>
+</pre>	
+</div>
+
+<h3><i class="ion-arrow-right-b"> </i>You can add your own gif by adding "data-url" in your html.</h3>
+<p>Don't use <span class="toolgif" data-url="http://66.media.tumblr.com/0b05c6d462cfd59a25722c7843a12207/tumblr_ob8ivb32NO1v9gbpno1_400.gif">drugs</span>.</p>
+<div class="example-2">
+<pre>
+<code>
+<p>&lt;p>Don't use &lt;span class="toolgif" data-url="http://66.media.tumblr.com/0b05c6d462cfd59a25722c7843a12207/tumblr_ob8ivb32NO1v9gbpno1_400.gif"&gt;drugs&lt;/span>.&lt;/p&gt;</p>
+</code>
+</pre>	
+</div>
+
+<h3><i class="ion-arrow-right-b"> </i>You can add your own tag by adding "data-tag" in your html.</h3>
+<p>Do you wear <span class="toolgif" data-tag="deal with it">glasses</span>?</p>
+<div class="example-3">
+<pre>
+<code>
+<p>&lt;p>Do you wear &lt;span class="toolgif" data-tag="deal with it"&gt;glasses&lt;/span>?&lt;/p&gt;</p>
+</code>
+</pre>	
+</div>
+
+<h3><i class="ion-arrow-right-b"> </i>You can also set "data-place" value top or bottom. Default is top.</h3>
+<p>You see i am below the <span class="toolgif" data-place="bottom" data-tag="coding">text</span>.</p>
+<div class="example-4">
+<pre>
+<code>
+<p>&lt;p>You see i am below the &lt;span class="toolgif" data-place="bottom" data-tag="coding"&gt;text&lt;/span>.&lt;/p&gt;</p>
+</code>
+</pre>	
+</div>
+
+<h1>Default Settings</h1>
+<p>These are default settings.You can customize them.</p>
+<div class="default-settings">
+<pre>
+<code>
+<p>$(".toolgif").toolgif({
+width:200,
+height:100,
+speed:200,
+borderRadius:5,
+textColor:"initial",
+gifChange:true <span>//If you make it false , one random gif limited by your tag will be found on Giphy.Gif won't change when you hover over your text again unless page reload is made.</span>
+});</p>
+</code>
+</pre>	
+</div>
+
+</section>
+
+<footer>
+<p class="copyright">© 2016 <a href="https://mburakerman.github.io/" target="_blank" rel="external">Mehmet Burak Erman</a></p>
+<p class="giphy-api"><a href="https://api.giphy.com/" target="_blank" rel="external"><span class="toolgif" data-url="https://raw.githubusercontent.com/Giphy/GiphyAPI/master/api_giphy_header.gif"><i class="ion-heart"></i> Giphy Api</span></a></p>
+</footer>
+
+</div>
+
+<script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="src/toolgif.js"></script>
+<script type="text/javascript">
+
+$(function() {
+
+$(".toolgif").toolgif({
+textColor: "#a53434"
+});
+
+});
+
+</script>
+</body>
+</html>
