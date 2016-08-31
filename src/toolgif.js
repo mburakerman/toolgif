@@ -110,33 +110,27 @@ $img.hide();
 span.hover(
 
 function () {
-$img.fadeIn(settings.speed);
-$arrow.fadeIn(settings.speed);
+$img.stop(true).fadeIn(settings.speed);
+$arrow.stop(true).fadeIn(settings.speed);
 }, 
 
 function () {
 if(settings.gifChange === false) {
-$img.fadeOut(settings.speed);
-$arrow.fadeOut(settings.speed);
+$img.stop(true).fadeOut(settings.speed);
+$arrow.stop(true).fadeOut(settings.speed);
 }else {
-$img.fadeOut(settings.speed);
-$arrow.fadeOut(settings.speed);
+$img.stop(true).fadeOut(settings.speed);
+$arrow.stop(true).fadeOut(settings.speed);
 refreshUrl();
 }
 }
 
 );
 
-$img.hover(
-function () {
-$img.fadeOut(settings.speed);
-$arrow.fadeOut(settings.speed);
-}, 
-function () {
-$img.fadeOut(settings.speed);
-$arrow.fadeOut(settings.speed);
-}
-);
+$img.hover(function() {
+$img.stop(true).fadeOut(settings.speed);
+$arrow.stop(true).fadeOut(settings.speed);
+});
 
 });
 };
