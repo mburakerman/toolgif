@@ -127,11 +127,6 @@ refreshUrl();
 
 );
 
-$img.hover(function() {
-$img.stop(true).fadeOut(settings.speed);
-$arrow.stop(true).fadeOut(settings.speed);
-});
-
 });
 };
 })(jQuery);
