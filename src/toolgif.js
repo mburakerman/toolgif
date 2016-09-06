@@ -1,4 +1,4 @@
-$(function() {
+(function() {
 $.fn.toolgif = function( options ) {
 
 var settings = $.extend({
