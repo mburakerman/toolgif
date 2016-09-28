@@ -17,7 +17,7 @@ return false;
 $( this ).data( 'toolgif', true );
 
 var span=$(this);
-//Create a img
+//Create an img
 var $img = $("<img>" , {class: "toolgif-gif"});
 $(this).append($img);
 
