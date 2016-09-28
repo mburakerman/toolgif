@@ -1,6 +1,8 @@
+/* Toolgif | https://mburakerman.github.io/toolgif/ | @mburakerman |License: MIT */
 (function() {
 $.fn.toolgif = function( options ) {
 
+//Default settings
 var settings = $.extend({
 width:200,
 height:100,
