@@ -1,4 +1,4 @@
-/* Toolgif | https://mburakerman.github.io/toolgif/ | @mburakerman |License: MIT */
+/* Toolgif | https://mburakerman.github.io/toolgif/ | @mburakerman | License: MIT */
 (function() {
 $.fn.toolgif = function( options ) {
 
