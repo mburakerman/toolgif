@@ -4,7 +4,7 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
 /* My Styles */
 body , html {
 font-family: 'Open Sans', sans-serif;
-background-color:#fafafc;
+background-color:#fff;
 color:#222;
 }
 
