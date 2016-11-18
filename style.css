@@ -30,13 +30,15 @@ text-align: center;
 nav h1 a{
 font-size:45px;
 text-decoration: none;
-color:#222;
+color:#484d55;
 }
 nav h3 {
 font-size: 20px;
+color: #505050;
 }
 nav p {
 font-size:16px;
+color:#606060;
 }
 .download {
 display:inline-block;
@@ -50,13 +52,13 @@ padding-right:10px;
 padding-top:5px;
 padding-bottom:5px;
 color:#ffffff;
-background-color:#222;
+background-color:#484d55;
 outline:none;
 border:none;
 cursor:pointer;
 }
 .download:focus , .download:hover , .download:active {
-background-color: #000;
+background-color: #393d44;
 }
 .twitter-share-button {
 display:inline-block;
@@ -86,11 +88,13 @@ padding:4px 8px;
 font-size: 15px;
 }
 section div {
-background-color:#222;
-color:#fff;	
+background-color:#484d55;
+color:#fff;
+border-radius: 4px;
 }
 section div p {
 display: inline-block;
+color:#fff;
 }
 section h1 {
 display: flex;
@@ -98,16 +102,22 @@ font-size:30px;
 color:#3B8898;
 }
 section h3 {
-font-size:20px;	
+font-size:20px;
+color:#404040;
+}
+section p {
+color:#404040;
 }
 .default-settings span {
 color:#4e4e4e;
 }
 footer {
 font-size:12px;
+color:#767676;
+border-top: 1px solid #d1d1d1;
 }
 footer p a{
-color:#222;
+color:#767676;
 }
 footer .copyright {
 float:left;
