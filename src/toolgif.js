@@ -56,7 +56,7 @@
             $img.css("border-radius", settings.borderRadius);
 
             //Check data-place
-            if ($.trim($(this).attr('data-place')) === "bottom") {
+            if ($.trim($(this).attr('data-toolgif-place')) === "bottom") {
                 $img.css("bottom", -settings.height - 2);
 
                 $arrow.css("bottom", -2);
@@ -84,8 +84,8 @@
             var tag = "&tag=";
 
             //Check data-tag
-            if ($.trim($(this).attr('data-tag'))) {
-                var dataTag = $(this).attr("data-tag");
+            if ($.trim($(this).attr('data-toolgif-tag'))) {
+                var dataTag = $(this).attr("data-toolgif-tag");
                 dataTag = dataTag.split(' ').join('+');
                 var url = host + path + api_key + tag + dataTag;
             } else {
@@ -93,8 +93,8 @@
             }
 
             //Check data-url
-            if ($.trim($(this).attr("data-url"))) {
-                var dataUrl = $(this).attr("data-url");
+            if ($.trim($(this).attr("data-toolgif-url"))) {
+                var dataUrl = $(this).attr("data-toolgif-url");
                 dataUrl = dataUrl.split(' ').join('+');
                 $.getJSON(url, function(mydata) {
                     $($img).attr("src", dataUrl);
