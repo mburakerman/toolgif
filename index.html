@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Toolgif | A very simple Jquery gif tooltip plugin</title>
-<link rel="shortcut icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAIAEBAAAAAAIABoBAAAJgAAACAgAAAAACAAqBAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAAEAEAAAAAAAAAAAAAAAAAAAAAAAA////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AVRMSEVUTEdT////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AVRMR29VTEj7VUxHZf///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BUVFHB1RMR5tUTUfRVUxIuVVMR2X///8B////Af///wFUS0sHVE1IWVRMR4dVTEiLVUxIi1VMSItVTEiLVUxIi1RMR8dUTEitVUpKDVVNSJtUTEeTVUxECf///wFTTUcVVExH0VRMR7dUTEd5VExIdVRMSHVUTEh1VExIdVRMSHVUTEhh////Af///wFUTEZHVExHtVRMR9VUTEcZVUxIn1RMSIf///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wFUTUeJVE1Ho1RNR+lVSkcX////Af///wFVTUgXVUxHOVFRRwf///8BVUpHF1VVPwNVSkcXVVU/A////wH///8BU0tIF1RMR+tVTUj/////Af///wFVTEdDVExH3VVMR6NUTUfPU0tHEVRNR+FVTUc9VE1H4VVNRz3///8B////Af///wFVTUj/VU1I/////wH///8BVU1HtVRNR2dVTEdvVE1H71RNR11UTUfhVU1HPVRNR+FVTUeNVE1HLf///wH///8BVU1I/1VNSP////8B////AVVMR6dUTUeFVUxEEVRMRnFXSUkLVE1H4VVNRz1UTUfhVE1Hh1RMRyf///8B////AVVNSP9UTEj3UUhIB////wFUTEcnVU1H1VRNR9VUTUep////AVRMR8lVTEc5VExHyVRNR89UTUdj////AVFISAdUTEj3VExIyVRMR0f///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wFUTEdHVExIyVRLR0lUTEfhVExIR1hLRAlfPz8FXz8/BV8/PwVfPz8FXz8/BV8/PwVfPz8FXz8/BVhLRAlUTEhHVExH4VRLR0n///8BVU1GSVVMSMdVTUf3VU1H+1VNR/tVTUf7VU1H+1VNR/tVTUf7VU1H+1VNR/tVTUf3VUxIx1VNRkn///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AQAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8oAAAAIAAAAEAAAAABACAAAAAAAIAQAAAAAAAAAAAAAAAAAAAAAAAA////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wFPT08RVE1Hgf///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BUkxGKVVNSNtVTEfJ////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AVNMSUlVTEjxVU1I/1VMR8n///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wFVTEh1VExH/VVNSP9VTUj/VUxHyf///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wFISEgHVU1HoVVNSP9VTUj/VUxIsVVNSP9VTEfJ////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BUVFHGVVMR8lVTUj/VU1H9VROSFVWTUg5VU1I/1VMR8n///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AV8/PwlVSkoZVUpKGVVKShlVSkoZVUpKGVVKShlVSkoZVUpKGVVKShlVSkoZVUpKGVNLRz1UTUflVU1I/1RNSOFVSkox////AVZNSDlVTUj/VUxHyf///wH///8B////Af///wH///8B////Af///wH///8BVEtLG1RNSJVUTUjNVExI+1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUjDVEhIFf///wH///8BVk1IOVVNSP9UTEf3VE1IjVVMRB////8B////Af///wH///8B////AVRMRltUTUfvVU1I/1VNSP9UTUj3VExI6VRMSOlUTEjpVExI6VRMSOlUTEjpVExI6VRMSOlUTEjpVExI6VRMSOlUTEjpVE1Il2ZmMwX///8B////Af///wFWS0YvVE1H71VNSP9VTUj/VU1I+1RMR13///8B////Af///wFTTUdTVU1I/1VNSP9VTEenU05JNWZmMwX///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BVEtGN1VNR6FVTUj/VU1I/1RMR2X///8BWUxMFVVMSOlVTUj/VE1Iaf///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AVRNRm1VTUj/VE1H8VBQQxNVTUiDVU1I/1VMSLP///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AVVNR7dVTUj/VE1Hh1RNSLlVTUj/VktHR////wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BU0xIR1VNSP9UTEfFVE1H61VNSP9USEgV////Af///wH///8B////Af///wH///8BVU1IXVVNR3tVTEdrUVFHGf///wH///8B////AVdJSSdVS0YzVVU/Df///wFXSUknVUtGM1VVPw3///8B////Af///wH///8B////Af///wFUSEgVVU1I/1RNSO1VTUj/VU1I/////wH///8B////Af///wH///8BVUtGM1VNSNtVTUj/VU1I/1VNSP9VTUjbVE1Hi////wH///8BVE1Hw1VNSP9VTUd7////AVRNR8NVTUj/VU1He////wH///8B////Af///wH///8B////Af///wFVTUj/VU1I/1VNSP9VTUj/////Af///wH///8B////Af///wFVTUjbVU1I/1RMR51VS0YzVU1IXVVNSNtVTUj/U0tHQf///wFUTUfDVU1I/1VNR3v///8BVE1Hw1VNSP9VTUd7////Af///wH///8B////Af///wH///8B////AVVNSP9VTUj/VU1I/1VNSP////8B////Af///wH///8BVU1IXVVNSP9VTUjb////AVVVPw1VTUd7VE1Hw1VNSP9UTUev////AVRNR8NVTUj/VU1He////wFUTUfDVU1I/1VNR3v///8B////Af///wH///8B////Af///wH///8BVU1I/1VNSP9VTUj/VU1I/////wH///8B////Af///wFVTUd7VU1I/1RNR8P///8BVUtGM1VNSP9VTUj/VU1I/1RNR8P///8BVE1Hw1VNSP9VTUd7////AVRNR8NVTUj/VU1I21VNSNtUTUev////Af///wH///8B////Af///wFVTUj/VU1I/1VNSP9VTUj/////Af///wH///8B////AVVNR3tVTUj/VE1Hw////wH///8BVUtGM1VLRjNVS0YzV0lJJ////wFUTUfDVU1I/1VNR3v///8BVE1Hw1VNSP9VTUjbVE1Hw1RMR53///8B////Af///wH///8B////AVVNSP9VTUj/VU1I/1VNSP////8B////Af///wH///8BV0lJJ1VNSP9VTUj/VE5HT////wFVVT8NVE1Hw1RMR53///8B////AVRNR8NVTUj/VU1He////wFUTUfDVU1I/1VNR3v///8B////Af///wH///8B////Af///wH///8BVU1I/1VNSP9VTUj/VU1I/////wH///8B////Af///wH///8BVExHnVVNSP9VTUj/VE1Hw1VNSNtVTUj/VU1I2////wH///8BVE1Hw1VNSP9VTUd7////AVRNR8NVTUj/VU1I21VNSNtVTUjb////Af///wH///8B////Af///wFVTUj/VU1I/1RMSONVTUj/UUhIHf///wH///8B////Af///wH///8BVU1He1VNSNtVTUjbVU1I21RNR69RUUcZ////Af///wFUTEedVE1Hw1VMR2v///8BVExHnVRNR8NUTUfDVE1Hw1RNR6////8B////Af///wH///8BUUhIHVVNSP9UTEjjVExIsVVNSP9UTkdP////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wFUTkdPVU1I/1RMSLFVTEh5VU1I/1RMR8d/f38D////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BVVVVA1RMR8dVTUj/VUxIeVxFRQtUTEfdVU1I/1RNSI1VVVUD////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AVVVVQNUTUiNVU1I/1RMR91cRUUL////AVRMSD9UTEf9VU1I/1RNSMdUS0hVV09GHV8/PwlfPz8JXz8/CV8/PwlfPz8JXz8/CV8/PwlfPz8JXz8/CV8/PwlfPz8JXz8/CV8/PwlfPz8JXz8/CV8/PwlfPz8JXz8/CVdPRh1US0hVVE1Ix1VNSP9UTEf9VExIP////wH///8B////AVVMSD1VTUfdVU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1H3VVMSD3///8B////Af///wH///8B////AVVVPw1VTEh1VUxIrVVNR+NVTUf5VU1H+VVNR/lVTUf5VU1H+VVNR/lVTUf5VU1H+VVNR/lVTUf5VU1H+VVNR/lVTUf5VU1H+VVNR/lVTUf5VU1H+VVNR/lVTUfjVUxIrVVMSHVVVT8N////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+	<title>Toolgif | A very simple jQuery gif tooltip plugin</title>
+	<link rel="shortcut icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAIAEBAAAAAAIABoBAAAJgAAACAgAAAAACAAqBAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAAEAEAAAAAAAAAAAAAAAAAAAAAAAA////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AVRMSEVUTEdT////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AVRMR29VTEj7VUxHZf///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BUVFHB1RMR5tUTUfRVUxIuVVMR2X///8B////Af///wFUS0sHVE1IWVRMR4dVTEiLVUxIi1VMSItVTEiLVUxIi1RMR8dUTEitVUpKDVVNSJtUTEeTVUxECf///wFTTUcVVExH0VRMR7dUTEd5VExIdVRMSHVUTEh1VExIdVRMSHVUTEhh////Af///wFUTEZHVExHtVRMR9VUTEcZVUxIn1RMSIf///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wFUTUeJVE1Ho1RNR+lVSkcX////Af///wFVTUgXVUxHOVFRRwf///8BVUpHF1VVPwNVSkcXVVU/A////wH///8BU0tIF1RMR+tVTUj/////Af///wFVTEdDVExH3VVMR6NUTUfPU0tHEVRNR+FVTUc9VE1H4VVNRz3///8B////Af///wFVTUj/VU1I/////wH///8BVU1HtVRNR2dVTEdvVE1H71RNR11UTUfhVU1HPVRNR+FVTUeNVE1HLf///wH///8BVU1I/1VNSP////8B////AVVMR6dUTUeFVUxEEVRMRnFXSUkLVE1H4VVNRz1UTUfhVE1Hh1RMRyf///8B////AVVNSP9UTEj3UUhIB////wFUTEcnVU1H1VRNR9VUTUep////AVRMR8lVTEc5VExHyVRNR89UTUdj////AVFISAdUTEj3VExIyVRMR0f///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wFUTEdHVExIyVRLR0lUTEfhVExIR1hLRAlfPz8FXz8/BV8/PwVfPz8FXz8/BV8/PwVfPz8FXz8/BVhLRAlUTEhHVExH4VRLR0n///8BVU1GSVVMSMdVTUf3VU1H+1VNR/tVTUf7VU1H+1VNR/tVTUf7VU1H+1VNR/tVTUf3VUxIx1VNRkn///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AQAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8oAAAAIAAAAEAAAAABACAAAAAAAIAQAAAAAAAAAAAAAAAAAAAAAAAA////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wFPT08RVE1Hgf///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BUkxGKVVNSNtVTEfJ////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AVNMSUlVTEjxVU1I/1VMR8n///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wFVTEh1VExH/VVNSP9VTUj/VUxHyf///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wFISEgHVU1HoVVNSP9VTUj/VUxIsVVNSP9VTEfJ////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BUVFHGVVMR8lVTUj/VU1H9VROSFVWTUg5VU1I/1VMR8n///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AV8/PwlVSkoZVUpKGVVKShlVSkoZVUpKGVVKShlVSkoZVUpKGVVKShlVSkoZVUpKGVNLRz1UTUflVU1I/1RNSOFVSkox////AVZNSDlVTUj/VUxHyf///wH///8B////Af///wH///8B////Af///wH///8BVEtLG1RNSJVUTUjNVExI+1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUjDVEhIFf///wH///8BVk1IOVVNSP9UTEf3VE1IjVVMRB////8B////Af///wH///8B////AVRMRltUTUfvVU1I/1VNSP9UTUj3VExI6VRMSOlUTEjpVExI6VRMSOlUTEjpVExI6VRMSOlUTEjpVExI6VRMSOlUTEjpVE1Il2ZmMwX///8B////Af///wFWS0YvVE1H71VNSP9VTUj/VU1I+1RMR13///8B////Af///wFTTUdTVU1I/1VNSP9VTEenU05JNWZmMwX///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BVEtGN1VNR6FVTUj/VU1I/1RMR2X///8BWUxMFVVMSOlVTUj/VE1Iaf///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AVRNRm1VTUj/VE1H8VBQQxNVTUiDVU1I/1VMSLP///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AVVNR7dVTUj/VE1Hh1RNSLlVTUj/VktHR////wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BU0xIR1VNSP9UTEfFVE1H61VNSP9USEgV////Af///wH///8B////Af///wH///8BVU1IXVVNR3tVTEdrUVFHGf///wH///8B////AVdJSSdVS0YzVVU/Df///wFXSUknVUtGM1VVPw3///8B////Af///wH///8B////Af///wFUSEgVVU1I/1RNSO1VTUj/VU1I/////wH///8B////Af///wH///8BVUtGM1VNSNtVTUj/VU1I/1VNSP9VTUjbVE1Hi////wH///8BVE1Hw1VNSP9VTUd7////AVRNR8NVTUj/VU1He////wH///8B////Af///wH///8B////Af///wFVTUj/VU1I/1VNSP9VTUj/////Af///wH///8B////Af///wFVTUjbVU1I/1RMR51VS0YzVU1IXVVNSNtVTUj/U0tHQf///wFUTUfDVU1I/1VNR3v///8BVE1Hw1VNSP9VTUd7////Af///wH///8B////Af///wH///8B////AVVNSP9VTUj/VU1I/1VNSP////8B////Af///wH///8BVU1IXVVNSP9VTUjb////AVVVPw1VTUd7VE1Hw1VNSP9UTUev////AVRNR8NVTUj/VU1He////wFUTUfDVU1I/1VNR3v///8B////Af///wH///8B////Af///wH///8BVU1I/1VNSP9VTUj/VU1I/////wH///8B////Af///wFVTUd7VU1I/1RNR8P///8BVUtGM1VNSP9VTUj/VU1I/1RNR8P///8BVE1Hw1VNSP9VTUd7////AVRNR8NVTUj/VU1I21VNSNtUTUev////Af///wH///8B////Af///wFVTUj/VU1I/1VNSP9VTUj/////Af///wH///8B////AVVNR3tVTUj/VE1Hw////wH///8BVUtGM1VLRjNVS0YzV0lJJ////wFUTUfDVU1I/1VNR3v///8BVE1Hw1VNSP9VTUjbVE1Hw1RMR53///8B////Af///wH///8B////AVVNSP9VTUj/VU1I/1VNSP////8B////Af///wH///8BV0lJJ1VNSP9VTUj/VE5HT////wFVVT8NVE1Hw1RMR53///8B////AVRNR8NVTUj/VU1He////wFUTUfDVU1I/1VNR3v///8B////Af///wH///8B////Af///wH///8BVU1I/1VNSP9VTUj/VU1I/////wH///8B////Af///wH///8BVExHnVVNSP9VTUj/VE1Hw1VNSNtVTUj/VU1I2////wH///8BVE1Hw1VNSP9VTUd7////AVRNR8NVTUj/VU1I21VNSNtVTUjb////Af///wH///8B////Af///wFVTUj/VU1I/1RMSONVTUj/UUhIHf///wH///8B////Af///wH///8BVU1He1VNSNtVTUjbVU1I21RNR69RUUcZ////Af///wFUTEedVE1Hw1VMR2v///8BVExHnVRNR8NUTUfDVE1Hw1RNR6////8B////Af///wH///8BUUhIHVVNSP9UTEjjVExIsVVNSP9UTkdP////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wFUTkdPVU1I/1RMSLFVTEh5VU1I/1RMR8d/f38D////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BVVVVA1RMR8dVTUj/VUxIeVxFRQtUTEfdVU1I/1RNSI1VVVUD////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AVVVVQNUTUiNVU1I/1RMR91cRUUL////AVRMSD9UTEf9VU1I/1RNSMdUS0hVV09GHV8/PwlfPz8JXz8/CV8/PwlfPz8JXz8/CV8/PwlfPz8JXz8/CV8/PwlfPz8JXz8/CV8/PwlfPz8JXz8/CV8/PwlfPz8JXz8/CVdPRh1US0hVVE1Ix1VNSP9UTEf9VExIP////wH///8B////AVVMSD1VTUfdVU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1I/1VNSP9VTUj/VU1H3VVMSD3///8B////Af///wH///8B////AVVVPw1VTEh1VUxIrVVNR+NVTUf5VU1H+VVNR/lVTUf5VU1H+VVNR/lVTUf5VU1H+VVNR/lVTUf5VU1H+VVNR/lVTUf5VU1H+VVNR/lVTUf5VU1H+VVNR/lVTUfjVUxIrVVMSHVVVT8N////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
 
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 
-<meta name="google-site-verification" content="aq-2zJHO91H3IKfqqNZk7ea943I6pfKnBSbujkj_7pQ" />
+	<meta name="google-site-verification" content="aq-2zJHO91H3IKfqqNZk7ea943I6pfKnBSbujkj_7pQ" />
 
-<meta property="og:title" content="Toolgif" />
-<meta property="og:description" content="A very simple Jquery gif tooltip plugin" />
-<meta property="og:type" content="website" />
+	<meta property="og:title" content="Toolgif" />
+	<meta property="og:description" content="A very simple jQuery gif tooltip plugin" />
+	<meta property="og:type" content="website" />
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@mburakerman" />
-<meta name="twitter:creator" content="@mburakerman" />
-<meta name="twitter:title" content="Toolgif">
-<meta name="twitter:description" content="A very simple Jquery gif tooltip plugin" />
-<!-- Twitter --> 
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@mburakerman" />
+	<meta name="twitter:creator" content="@mburakerman" />
+	<meta name="twitter:title" content="Toolgif">
+	<meta name="twitter:description" content="A very simple jQuery gif tooltip plugin" />
+	<!-- Twitter --> 
 
 </head>
 <body>
@@ -48,7 +48,7 @@ Tweet
 </nav>
 
 <section>
-<h1>Getting Started</h1>	
+ <h1>Getting Started</h1>	
 
 <h3>Load Jquery and include Tooltip file</h3>
 <div class="jquery-toolgif">
@@ -61,7 +61,7 @@ Tweet
 </div>
 
 <h3>Set up your Html</h3>
-<p>If you  don't set "data-tag" in your html, Toolgif takes your text as tag and find gifs on <a href="https://giphy.com/" target="_blank" rel="external"><span class="toolgif" data-url="https://media.giphy.com/media/3o6gbbuLW76jkt8vIc/giphy.gif">Giphy</span></a>.</p>
+<p>If you  don't set "data-toolgif-tag" in your html, Toolgif takes your text as tag and find gifs on <a href="https://giphy.com/" target="_blank" rel="external"><span class="toolgif" data-toolgif-url="https://media.giphy.com/media/3o6gbbuLW76jkt8vIc/giphy.gif">Giphy</span></a>.</p>
 <div class="set-up-html">
 <pre>
 <code>
@@ -76,14 +76,14 @@ Tweet
 <code>
 <p>$(function() { 
 
-$(".toolgif").toolgif(); 
+  $(".toolgif").toolgif(); 
 
 });</p>
 </code>
 </pre>	
 </div>
 
-<h1>Examples</h1>
+ <h1>Examples</h1>
 <h3><i class="ion-arrow-right-b"> </i>Hover over cat more than one time.You see gifs are changing.</h3>
 <p>Lorem ipsum dolor sit <span class="toolgif">cat</span>.</p>
 <div class="example-1">
@@ -94,48 +94,48 @@ $(".toolgif").toolgif();
 </pre>	
 </div>
 
-<h3><i class="ion-arrow-right-b"> </i>You can add your own gif by adding "data-url" in your html.</h3>
-<p>Don't use <span class="toolgif" data-url="http://66.media.tumblr.com/0b05c6d462cfd59a25722c7843a12207/tumblr_ob8ivb32NO1v9gbpno1_400.gif">drugs</span>.</p>
+<h3><i class="ion-arrow-right-b"> </i>You can add your own gif by adding "data-toolgif-url" in your html.</h3>
+<p>Don't use <span class="toolgif" data-toolgif-url="http://66.media.tumblr.com/0b05c6d462cfd59a25722c7843a12207/tumblr_ob8ivb32NO1v9gbpno1_400.gif">drugs</span>.</p>
 <div class="example-2">
 <pre>
 <code>
-<p>&lt;p>Don't use &lt;span class="toolgif" data-url="http://66.media.tumblr.com/0b05c6d462cfd59a25722c7843a12207/tumblr_ob8ivb32NO1v9gbpno1_400.gif"&gt;drugs&lt;/span>.&lt;/p&gt;</p>
+<p>&lt;p>Don't use &lt;span class="toolgif" data-toolgif-url="http://66.media.tumblr.com/0b05c6d462cfd59a25722c7843a12207/tumblr_ob8ivb32NO1v9gbpno1_400.gif"&gt;drugs&lt;/span>.&lt;/p&gt;</p>
 </code>
 </pre>	
 </div>
 
-<h3><i class="ion-arrow-right-b"> </i>You can add your own tag by adding "data-tag" in your html.</h3>
-<p>Do you wear <span class="toolgif" data-tag="deal with it">glasses</span>?</p>
+<h3><i class="ion-arrow-right-b"> </i>You can add your own tag by adding "data-toolgif-tag" in your html.</h3>
+<p>Do you wear <span class="toolgif" data-toolgif-tag="deal with it">glasses</span>?</p>
 <div class="example-3">
 <pre>
 <code>
-<p>&lt;p>Do you wear &lt;span class="toolgif" data-tag="deal with it"&gt;glasses&lt;/span>?&lt;/p&gt;</p>
+<p>&lt;p>Do you wear &lt;span class="toolgif" data-toolgif-tag="deal with it"&gt;glasses&lt;/span>?&lt;/p&gt;</p>
 </code>
 </pre>	
 </div>
 
-<h3><i class="ion-arrow-right-b"> </i>You can also set "data-place" value top or bottom. Default is top.</h3>
-<p>You see i am below the <span class="toolgif" data-place="bottom" data-tag="coding">text</span>.</p>
+<h3><i class="ion-arrow-right-b"> </i>You can also set "data-toolgif-place" value top or bottom. Default is top.</h3>
+<p>You see i am below the <span class="toolgif" data-toolgif-place="bottom" data-toolgif-tag="coding">text</span>.</p>
 <div class="example-4">
 <pre>
 <code>
-<p>&lt;p>You see i am below the &lt;span class="toolgif" data-place="bottom" data-tag="coding"&gt;text&lt;/span>.&lt;/p&gt;</p>
+<p>&lt;p>You see i am below the &lt;span class="toolgif" data-toolgif-place="bottom" data-toolgig-tag="coding"&gt;text&lt;/span>.&lt;/p&gt;</p>
 </code>
 </pre>	
 </div>
 
-<h1>Default Settings</h1>
+ <h1>Default Settings</h1>
 <p>These are default settings.You can customize them.</p>
 <div class="default-settings">
 <pre>
 <code>
 <p>$(".toolgif").toolgif({
-width:200,
-height:100,
-speed:200,
-borderRadius:5,
-textColor:"initial",
-gifChange:true <span>//If you make it false , one random gif limited by your tag will be found on Giphy.Gif won't change when you hover over your text again unless page reload is made.</span>
+  width:200,
+  height:100,
+  speed:200,
+  borderRadius:5,
+  textColor:"initial",
+  gifChange:true <span>//If you make it false , one random gif limited by your tag will be found on Giphy.Gif won't change when you hover over your text again unless page reload is made.</span>
 });</p>
 </code>
 </pre>	
@@ -144,8 +144,8 @@ gifChange:true <span>//If you make it false , one random gif limited by your tag
 </section>
 
 <footer>
-<p class="copyright">© <a href="https://mburakerman.github.io/" target="_blank" rel="external">Mehmet Burak Erman</a></p>
-<p class="giphy-api"><a href="https://api.giphy.com/" target="_blank" rel="external"><span class="toolgif" data-url="https://raw.githubusercontent.com/Giphy/GiphyAPI/master/api_giphy_header.gif"><i class="ion-heart"></i> Giphy Api</span></a></p>
+ <p class="copyright">© <a href="https://mburakerman.github.io/" target="_blank" rel="external">Mehmet Burak Erman</a></p>
+ <p class="giphy-api"><a href="https://api.giphy.com/" target="_blank" rel="external"><span class="toolgif" data-toolgif-url="https://raw.githubusercontent.com/Giphy/GiphyAPI/master/api_giphy_header.gif"><i class="ion-heart"></i> Giphy Api</span></a></p>
 </footer>
 
 </div>
@@ -157,20 +157,20 @@ gifChange:true <span>//If you make it false , one random gif limited by your tag
 $(function() {
 
 $(".toolgif").toolgif({
-textColor: "#a53434"
+ textColor: "#a53434"
 });
 
 });
 
 </script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-75826567-4', 'auto');
-  ga('send', 'pageview');
+ga('create', 'UA-75826567-4', 'auto');
+ga('send', 'pageview');
 
 </script>
 </body>
