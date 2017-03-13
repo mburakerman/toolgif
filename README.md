@@ -13,8 +13,8 @@ Load jQuery and include Toolgif file
 ```
 or use CDN
 ```html
-<link rel="stylesheet" href="https://code.jquery.com/jquery-3.1.1.min.js">
-<link rel="stylesheet" href="https://cdn.rawgit.com/mburakerman/toolgif/master/src/toolgif.js">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdn.rawgit.com/mburakerman/toolgif/master/src/toolgif.js"></script>
 ```
 
 
