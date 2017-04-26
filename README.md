@@ -20,7 +20,7 @@ or use CDN
 
 ## Usage
 
-#### Simple Usage
+### Simple Usage
 
 ```html
 <p>Lorem ipsum dolor sit <span class="toolgif">cat</span>.</p>
