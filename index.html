@@ -52,93 +52,79 @@ Tweet
 
 <h3>Load jQuery and include Toolgif file</h3>
 <div class="jquery-toolgif">
-<pre>
-<code>
-<p>&lt;script type="text/javascript" src="jquery.js"&gt;&lt;/script></p>
-<p>&lt;script type="text/javascript" src="toolgif.js"&gt;&lt;/script></p>
-</code>
-</pre>	
+
+<pre style="display: block; overflow-x: auto; background: #484d55; color: rgb(248, 248, 242);"><span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(241, 250, 140); ">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string" style="color: rgb(241, 250, 140);">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(241, 250, 140);">"jquery.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(241, 250, 140);">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(241, 250, 140); ">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string" style="color: rgb(241, 250, 140);">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(241, 250, 140);">"toolgif.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(241, 250, 140); ">script</span>&gt;</span></pre>
+
 </div>
 
 <h3>Set up your Html</h3>
 <p>If you  don't set "data-toolgif-tag" in your html, Toolgif takes your text as tag and find gifs on <a href="https://giphy.com/" target="_blank" rel="external"><span class="toolgif" data-toolgif-url="https://media.giphy.com/media/3o6gbbuLW76jkt8vIc/giphy.gif">Giphy</span></a>.</p>
 <div class="set-up-html">
-<pre>
-<code>
-<p>&lt;p&gt;I am a &lt;span class="toolgif"&gt;test&lt;/span&gt;.&lt;/p&gt;</p>
-</code>
-</pre>	
+
+<pre style="display: block; overflow-x: auto; background: #484d55; color: rgb(248, 248, 242);"><span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(241, 250, 140);">p</span>&gt;</span>I am a <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(241, 250, 140); ">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(241, 250, 140);">"toolgif"</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(241, 250, 140); ">span</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(241, 250, 140); ">p</span>&gt;</span></pre>
+
 </div>
 
 <h3>Activate Toolgif</h3>
 <div class="activate-toolgif">
-<pre>
-<code>
-<p>$(function() { 
 
-  $(".toolgif").toolgif(); 
+<pre class="hljs" style="display: block; overflow-x: auto; background: #484d55; color: rgb(248, 248, 242);">$(<span class="hljs-function"><span class="hljs-keyword" style="color: rgb(255, 121, 198); ">function</span>(<span class="hljs-params"></span>) </span>{ 
+   $(<span class="hljs-string" style="color: rgb(241, 250, 140);">".toolgif"</span>).toolgif(); 
+});</pre>
 
-});</p>
-</code>
-</pre>	
 </div>
 
  <h1>Examples</h1>
 <h3><i class="ion-arrow-right-b"> </i>Hover over cat more than one time.You see gifs are changing.</h3>
 <p>Lorem ipsum dolor sit <span class="toolgif">cat</span>.</p>
 <div class="example-1">
-<pre>
-<code>
-<p>&lt;p>Lorem ipsum dolor sit &lt;span class="toolgif"&gt;cat&lt;/span>.&lt;/p&gt;</p>
-</code>
-</pre>	
+
+<pre class="hljs" style="display: block; overflow-x: auto; background: #484d55; color: rgb(248, 248, 242);"><span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(241, 250, 140);">p</span>&gt;</span>Lorem ipsum dolor sit <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(241, 250, 140); ">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(241, 250, 140);">"toolgif"</span>&gt;</span>cat<span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(241, 250, 140);">span</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(241, 250, 140); ">p</span>&gt;</span>
+</pre>
+
 </div>
 
 <h3><i class="ion-arrow-right-b"> </i>You can add your own gif by adding "data-toolgif-url" in your html.</h3>
 <p>Don't use <span class="toolgif" data-toolgif-url="http://66.media.tumblr.com/0b05c6d462cfd59a25722c7843a12207/tumblr_ob8ivb32NO1v9gbpno1_400.gif">drugs</span>.</p>
 <div class="example-2">
-<pre>
-<code>
-<p>&lt;p>Don't use &lt;span class="toolgif" data-toolgif-url="http://66.media.tumblr.com/0b05c6d462cfd59a25722c7843a12207/tumblr_ob8ivb32NO1v9gbpno1_400.gif"&gt;drugs&lt;/span>.&lt;/p&gt;</p>
-</code>
-</pre>	
+
+<pre class="hljs" style="display: block; overflow-x: auto;  background: #484d55; color: rgb(248, 248, 242);"><span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(241, 250, 140); ">p</span>&gt;</span>Don't use <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(241, 250, 140); ">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(241, 250, 140);">"toolgif"</span> <span class="hljs-attr">data-toolgif-url</span>=<span class="hljs-string" style="color: rgb(241, 250, 140);">"http://66.media.tumblr.com/0b05c6d462cfd59a25722c7843a12207/tumblr_ob8ivb32NO1v9gbpno1_400.gif"</span>&gt;</span>drugs<span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(241, 250, 140); ">span</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(241, 250, 140);">p</span>&gt;</span>
+</pre>
+
 </div>
 
 <h3><i class="ion-arrow-right-b"> </i>You can add your own tag by adding "data-toolgif-tag" in your html.</h3>
 <p>Do you wear <span class="toolgif" data-toolgif-tag="deal with it">glasses</span>?</p>
 <div class="example-3">
-<pre>
-<code>
-<p>&lt;p>Do you wear &lt;span class="toolgif" data-toolgif-tag="deal with it"&gt;glasses&lt;/span>?&lt;/p&gt;</p>
-</code>
-</pre>	
+
+<pre class="hljs" style="display: block; overflow-x: auto; background: #484d55; color: rgb(248, 248, 242);"><span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(241, 250, 140); ">p</span>&gt;</span>Do you wear <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(241, 250, 140);">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(241, 250, 140);">"toolgif"</span> <span class="hljs-attr">data-toolgif-tag</span>=<span class="hljs-string" style="color: rgb(241, 250, 140);">"deal with it"</span>&gt;</span>glasses<span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(241, 250, 140); ">span</span>&gt;</span>?<span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(241, 250, 140);">p</span>&gt;</span></pre>
+
 </div>
 
 <h3><i class="ion-arrow-right-b"> </i>You can also set "data-toolgif-place" value top or bottom. Default is top.</h3>
 <p>You see i am below the <span class="toolgif" data-toolgif-place="bottom" data-toolgif-tag="coding">text</span>.</p>
 <div class="example-4">
-<pre>
-<code>
-<p>&lt;p>You see i am below the &lt;span class="toolgif" data-toolgif-place="bottom" data-toolgig-tag="coding"&gt;text&lt;/span>.&lt;/p&gt;</p>
-</code>
-</pre>	
+
+<pre class="hljs" style="display: block; overflow-x: auto;  background: #484d55; color: rgb(248, 248, 242);"><span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(241, 250, 140);">p</span>&gt;</span>You see i am below the <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(241, 250, 140); font-weight: 700;">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(241, 250, 140);">"toolgif"</span> <span class="hljs-attr">data-toolgif-place</span>=<span class="hljs-string" style="color: rgb(241, 250, 140);">"bottom"</span> <span class="hljs-attr">data-toolgig-tag</span>=<span class="hljs-string" style="color: rgb(241, 250, 140);">"coding"</span>&gt;</span>text<span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(241, 250, 140);">span</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(241, 250, 140); ">p</span>&gt;</span></pre>
+
 </div>
 
  <h1>Default Settings</h1>
-<p>These are default settings.You can customize them.</p>
+<p>These are default settings. You can customize them.</p>
 <div class="default-settings">
-<pre>
-<code>
-<p>$(".toolgif").toolgif({
-  width:200,
-  height:100,
-  speed:200,
-  borderRadius:5,
-  textColor:"initial",
-  gifChange:true <span>//If you make it false , one random gif limited by your tag will be found on Giphy.Gif won't change when you hover over your text again unless page reload is made.</span>
-});</p>
-</code>
-</pre>	
+
+<pre class="hljs" style="display: block; overflow-x: auto; background: #484d55; color: rgb(248, 248, 242);">$(<span class="hljs-string" style="color: rgb(241, 250, 140);">".toolgif"</span>).toolgif({
+  width:<span class="hljs-number">200</span>,
+  height:<span class="hljs-number">100</span>,
+  speed:<span class="hljs-number">200</span>,  <span class="hljs-comment" style="color: rgb(98, 114, 164);">// fadeIn and fadeOut speed</span>
+  borderRadius:<span class="hljs-number">5</span>,
+  textColor:<span class="hljs-string" style="color: rgb(241, 250, 140);">"initial"</span>,
+  gifChange:<span class="hljs-literal" style="color: rgb(139, 233, 253);">true</span>  <span class="hljs-comment" style="color: rgb(98, 114, 164);">// If you make it false, one random gif limited by your tag will be found on Giphy. Gif won't change when you hover over your text again unless page reload is made.</span>
+});
+</pre>
+
 </div>
 
 </section>
@@ -156,22 +142,21 @@ Tweet
 
 $(function() {
 
-$(".toolgif").toolgif({
- textColor: "#a53434"
-});
+  $(".toolgif").toolgif({
+    textColor: "rgb(209, 83, 85)"
+  });
 
 });
 
 </script>
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-75826567-4', 'auto');
-ga('send', 'pageview');
-
+	ga('create', 'UA-75826567-4', 'auto');
+	ga('send', 'pageview');
 </script>
 </body>
 </html>
