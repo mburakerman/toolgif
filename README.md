@@ -3,7 +3,7 @@
 >A very simple jQuery gif tooltip plugin
 
 
-### Install
+## Install
 
 Load jQuery and include Toolgif file
 
@@ -18,9 +18,9 @@ or use CDN
 ```
 
 
-### Usage
+## Usage
 
-##### Simple Usage
+#### Simple Usage
 
 ```html
 <p>Lorem ipsum dolor sit <span class="toolgif">cat</span>.</p>
@@ -38,20 +38,20 @@ or use CDN
 **Visit the [website](https://mburakerman.github.io/toolgif) for more examples and settings.**
 
 
-### Customize
+## Customize
 
 ```js
 $(".toolgif").toolgif({
   width:200,
   height:100,
-  speed:200,
+  speed:200, // fadeIn and fadeOut speed
   borderRadius:5,
   textColor:"initial",
-  gifChange:true //If you make it false , one random gif limited by your tag will be found on Giphy.Gif won't change when you hover over your text again unless page reload is made.
+  gifChange:true // If you make it false, one random gif limited by your tag will be found on Giphy. Gif won't change when you hover over your text again unless page reload is made.
 });
 ```
 
 
-### License
+## License
 
 Licensed under the MIT License.
