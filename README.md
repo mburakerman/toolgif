@@ -5,6 +5,8 @@
 
 ## Install
 
+`npm install toolgif`
+
 Load jQuery and include Toolgif file
 
 ```html
