@@ -5,7 +5,7 @@
 
 ## Install
 
-`npm install toolgif`
+[![NPM](https://nodei.co/npm/toolgif.png?mini=true)](https://www.npmjs.com/package/toolgif/)
 
 Load jQuery and include Toolgif file
 
