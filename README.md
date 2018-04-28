@@ -38,7 +38,7 @@ new Toolgif(".my-class", {
   height: 100,
   borderRadius: 5,
   placement: "top",
-  downsized: true,
+  downsized: true, // File size under 2mb (see https://developers.giphy.com/docs/)
   preloader: // data url here(it's kinda long as you expect so i didn't put here)
 }).toolgif();
 ```
