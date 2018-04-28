@@ -25,7 +25,7 @@ or use CDN
    new Toolgif(".my-class").toolgif();
 </script>
 ```
-[Simple usage CodePen demo ](#)
+[Simple usage CodePen demo ](https://codepen.io/anon/pen/VxPYwW/)
 
 **Visit the [website](https://mburakerman.github.io/toolgif/) for more examples and settings.**
 
