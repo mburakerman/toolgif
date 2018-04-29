@@ -9,7 +9,7 @@
 
 or use CDN
 ```html
-<script src="https://cdn.rawgit.com/mburakerman/toolgif/master/src/toolgif.min.js"></script>
+<script src="https://unpkg.com/toolgif"></script>
 ```
 
 ## Usage
