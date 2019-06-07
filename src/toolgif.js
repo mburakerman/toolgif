@@ -108,7 +108,7 @@
 		giphy(text, callback) {
 			const host = "https://api.giphy.com";
 			const path = "/v1/gifs/random?";
-			const api_key = "&api_key=dc6zaTOxFJmzC";
+			const api_key = "&api_key=MFkHa14W6F1BYFsvPVgCwnt4IEyAmiia";
 			const query = "&q=";
 			const tag = "&tag=";
 			let word = text;
