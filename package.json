@@ -1,50 +1,22 @@
 {
-  "_from": "toolgif",
-  "_id": "toolgif@2.0.1",
-  "_inBundle": false,
-  "_integrity": "sha512-ZUyF1yGRop3mBNOI/GYqQ+qIASmYGmxPAXtmOeRS0PdTd/rO9dN3MY7KR+OuW42hOf+YU9BsXCCMJk1w3yeeIA==",
-  "_location": "/toolgif",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "toolgif",
-    "name": "toolgif",
-    "escapedName": "toolgif",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/toolgif/-/toolgif-2.0.1.tgz",
-  "_shasum": "241ae1941676910a02a979ce6bbd8f868730e133",
-  "_spec": "toolgif",
-  "_where": "C:\\Users\\mburakerman\\Desktop",
-  "author": {
-    "name": "Mehmet Burak Erman"
-  },
-  "bugs": {
-    "url": "https://github.com/mburakerman/toolgif/issues/"
-  },
-  "bundleDependencies": false,
-  "deprecated": false,
+  "name": "toolgif",
+  "version": "2.1.0",
   "description": "The only GIF tooltip plugin you need",
-  "homepage": "https://mburakerman.github.io/toolgif/",
+  "main": "src/toolgif.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mburakerman/toolgif.git"
+  },
   "keywords": [
     "tooltip",
     "gif",
     "toolgif",
     "giphy"
   ],
+  "author": "Mehmet Burak Erman",
   "license": "MIT",
-  "main": "src/toolgif.min.js",
-  "name": "toolgif",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mburakerman/toolgif.git"
+  "bugs": {
+    "url": "https://github.com/mburakerman/toolgif/issues"
   },
-  "version": "2.0.2"
+  "homepage": "https://mburakerman.github.io/toolgif/"
 }
